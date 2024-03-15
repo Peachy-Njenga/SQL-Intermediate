@@ -24,6 +24,9 @@ WHERE so.amount >= 500
 GROUP BY so.salesperson_id
 
 --Compute the average percent of quota for salespeople.
-
+SELECT AVG(percentage_of_quota) as "Average quota"
+FROM Salesperson
 
 --Show the name of the salesperson with highest percent of quota.
+SELECT MAX(percentage_of_quota)
+FROM Salesperson
